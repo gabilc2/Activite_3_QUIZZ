@@ -1,0 +1,39 @@
+# Module Flask
+
+## Une application Web ?
+* Un logiciel auquel on accède via le navigateur
+Exemples :
+- Gmail
+- Discord
+- Steam web
+
+## App statique vs dynamique ?
+* Statique = Livre -> peu importe qui y accède, on obtient le même contenu
+- wikipedia
+- example.com
+- documentation officiel
+
+* Dynamique = Interactive -> S'adapte aux actions de l'utilisateur
+- Discord
+- Spotify
+- Youtube
+- Leboncoin
+
+### Flask
+* Framework Python pour la création d'application web légère
+
+## Installation VScode
+
+### Extensions
+* Live share = Coder à plusieurs
+* Live server = Raffraichit auto le site pour voir les modifs HTML/CSS
+* Prettier = Formate le code auto
+* HTMLHint = Détection d'erreurs et formatage avec bonnes pratiques
+* Tailwind css IntelliSense = autocomplétion des classes tailwind
+* Python = Support Python complet
+* Flask Snippets = Raccourci Flask
+* Jinja = Coloration & autocomplétion des templates Jinja (utilisé par Flask)
+
+### Installation de Flask
+'pip install flask'
+
