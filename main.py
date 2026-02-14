@@ -1,7 +1,7 @@
 # Importer Flask
 from flask import Flask, render_template, request
 from random import choice
-
+import os 
 reponse_possible = ["Essaye plus tard"]
 "Essaye plus tard",
 "Essaye encore",
