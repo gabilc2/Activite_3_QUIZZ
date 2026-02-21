@@ -1,7 +1,10 @@
 # Importer Flask
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, session
 from random import choice
 import os 
+
+from questions import questions
+
 reponse_possible = ["Essaye plus tard"]
 "Essaye plus tard",
 "Essaye encore",
@@ -29,6 +32,7 @@ reponse_possible = ["Essaye plus tard"]
 # Création de l'application = instance de la classe Flask
 app = Flask(__name__)
 
+app.secret_key = os.random(32)
 #On crée le premier route a la racine : à la racine de notre application "/"
 # @app.route() : ce décodeur permet d'associer une URL à une fonction
 # root -> page racine de l'app web
@@ -40,7 +44,14 @@ def index():
     if request.method == "POST":
         # on génère une réponse aléatoire parmi les réponses possibles
         reponse = choice(reponse_possible)
+    session["numero_question"] = 0
+    session["score"] = {"G":0, "V":0, "T":0, "P":0}
     return render_template("index.html", reponse = reponse)
+
+@app.route("/question")
+def question():
+
+    return render_template("question.html")
 
 
 
